@@ -22,7 +22,7 @@ public class SongrController {
     public String splash() {
         return "splash";
     }
-    
+
     @GetMapping("/albums")
     public String albums(Model model) {
         Album[] albums = {

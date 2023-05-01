@@ -12,13 +12,21 @@ h1 {
     padding: 20px 0;
 }
 
+/* Navigation pane */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #013220;
+    padding: 10px;
+}
+
 /* Splash page styles */
 .splash-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 44px); /* Adjust for the navbar height */
     background-color: #e0f2e9;
 }
 
@@ -30,7 +38,7 @@ h1 {
 
 .explore-btn {
     display: inline-block;
-    background-color: #013220;
+    background-color: transparent;
     color: #ffffff;
     text-decoration: none;
     font-size: 18px;
