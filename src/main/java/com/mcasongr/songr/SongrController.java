@@ -18,12 +18,17 @@ public class SongrController {
         return "/capitalize/{text}";
     }
 
+    @GetMapping("/")
+    public String splash() {
+        return "splash";
+    }
+    
     @GetMapping("/albums")
     public String albums(Model model) {
         Album[] albums = {
-                new Album("The Dark Side of the Moon", "Pink Floyd", 10, 2640, "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png"),
-                new Album("Thriller", "Michael Jackson", 9, 2580, "https://upload.wikimedia.org/wikipedia/en/5/55/Michael_Jackson_-_Thriller.png"),
-                new Album("Back in Black", "AC/DC", 10, 2494, "https://upload.wikimedia.org/wikipedia/en/7/74/ACDC_Back_in_Black.png")
+                new Album("Loveless", "My Bloody Valentine", 11, 2911, "/images/My_Bloody_Valentine_-_Loveless.png"),
+                new Album("Fleet Foxes", "Fleet Foxes", 6, 1362, "/images/Fleet_Foxes_-_Fleet_Foxes.jpg"),
+                new Album("What's Going On", "Marvin Gaye", 11, 2132, "/images/What's_Going_On_-_Marvin_Gaye.jpg")
         };
 
         model.addAttribute("albums", albums);

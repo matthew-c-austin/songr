@@ -1,0 +1,80 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #013220;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Splash page styles */
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f2e9;
+}
+
+.splash-container p {
+    font-size: 18px;
+    color: #013220;
+    text-align: center;
+}
+
+.explore-btn {
+    display: inline-block;
+    background-color: #013220;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.explore-btn:hover {
+    background-color: #015c47;
+}
+
+/* Albums styles */
+.album-list {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.album-list table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.album-list th {
+    background-color: #013220;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.album-list td {
+    border: 1px solid #013220;
+    padding: 10px;
+}
+
+.album-list tbody tr:nth-child(even) {
+    background-color: #e0f2e9;
+}
+
+.album-list tbody tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.album-list img {
+    border-radius: 10px;
+}
