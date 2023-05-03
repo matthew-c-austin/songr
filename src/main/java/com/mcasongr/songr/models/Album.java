@@ -1,11 +1,14 @@
 package com.mcasongr.songr.models;
 
 import jakarta.persistence.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 public class Album {
 
+    // Fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
@@ -18,25 +21,38 @@ public class Album {
     private int length;
     private String imageUrl;
 
+    // Constructors
     protected Album() {}
 
-    public Album(long id, String title, String artist, int songCount, int length, String imageUrl) {
+    public Album(long id, String title, String artist, int length, String imageUrl) {
         this.id = id;
         this.title = title;
         this.artist = artist;
-        this.songCount = songCount;
         this.length = length;
         this.imageUrl = imageUrl;
+        this.trackList = new ArrayList<>();
+        this.songCount = this.trackList.size();
     }
 
-    public Album(String title, String artist, int songCount, int length, String imageUrl) {
+    public Album(String title, String artist, int length, String imageUrl) {
         this.title = title;
         this.artist = artist;
-        this.songCount = songCount;
         this.length = length;
         this.imageUrl = imageUrl;
+        this.trackList = new ArrayList<>();
+        this.songCount = this.trackList.size();
     }
 
+    // Methods
+    public void calculateAlbumLength() {
+        int total = 0;
+        for(Song track : trackList) {
+            total += track.length;
+        }
+        length = total;
+    }
+
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -73,8 +89,10 @@ public class Album {
         return trackList;
     }
 
-    public void setTrackList(List<Song> trackList) {
-        this.trackList = trackList;
+    public void addSong(Song song) {
+        song.setAlbum(this);
+        trackList.add(song);
+        this.songCount = this.trackList.size();
     }
 
     public int getLength() {

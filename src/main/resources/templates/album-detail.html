@@ -6,46 +6,37 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
-    <title>Albums</title>
+    <title>Album Detail</title>
 </head>
 <body>
-<h1>Albums</h1>
+<h1 th:text="${album.title}"></h1>
 <div class="album-list">
     <table>
         <thead>
         <tr>
+            <th>Track Number</th>
             <th>Title</th>
-            <th>Artist</th>
-            <th>Song Count</th>
             <th>Length (s)</th>
-            <th>Album Art</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="album : ${albums}">
-            <td>
-                <a th:href="@{/album-detail/{id}(id=${album.id})}" th:text="${album.title}"></a>
-            </td>
-            <td th:text="${album.artist}"></td>
-            <td th:text="${album.songCount}"></td>
-            <td th:text="${album.length}"></td>
-            <td>
-                <img th:src="${album.imageUrl}" alt="Album Art" width="100" height="100" />
-            </td>
+        <tr th:each="song : ${album.songs}">
+            <td th:text="${song.trackNumber}"></td>
+            <td th:text="${song.title}"></td>
+            <td th:text="${song.length}"></td>
         </tr>
         </tbody>
     </table>
     <div class="form-container">
-        <form action="/albums" method="POST">
+        <form action="/addSong" method="POST">
+            <input type="hidden" id="albumId" name="albumId" th:value="${album.id}" />
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required>
-            <label for="artist">Artist:</label>
-            <input type="text" id="artist" name="artist" required>
             <label for="length">Length (in seconds):</label>
             <input type="number" id="length" name="length" min="1" step="1" required>
-            <label for="imageUrl">Image URL:</label>
-            <input type="url" id="imageUrl" name="imageUrl" required>
-            <button type="submit">Add Album</button>
+            <label for="trackNumber">Track Number:</label>
+            <input type="number" id="trackNumber" name="trackNumber" min="1" step="1" required>
+            <button type="submit">Add Song</button>
         </form>
     </div>
 </div>

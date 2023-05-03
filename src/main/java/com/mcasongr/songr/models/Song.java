@@ -12,6 +12,7 @@ public class Song {
     int length;
     int trackNumber;
     @ManyToOne
+    @JoinColumn(name = "album_id")
     Album album;
 
     public Song() {
@@ -22,7 +23,6 @@ public class Song {
         this.title = title;
         this.length = length;
         this.trackNumber = trackNumber;
-        this.album = album;
     }
 
     public long getId() { return id; }
