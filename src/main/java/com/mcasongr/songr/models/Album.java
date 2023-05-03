@@ -17,39 +17,39 @@ public class Album {
     private int songCount;
     @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
     @OrderBy("trackNumber")
-    List<Song> trackList;
+    List<Song> songs;
     private int length;
     private String imageUrl;
 
     // Constructors
     protected Album() {}
 
-    public Album(long id, String title, String artist, int length, String imageUrl) {
+    public Album(long id, String title, String artist, String imageUrl) {
         this.id = id;
         this.title = title;
         this.artist = artist;
-        this.length = length;
         this.imageUrl = imageUrl;
-        this.trackList = new ArrayList<>();
-        this.songCount = this.trackList.size();
+        this.songs = new ArrayList<>();
+        this.songCount = this.songs.size();
+        calculateAlbumLength();
     }
 
-    public Album(String title, String artist, int length, String imageUrl) {
+    public Album(String title, String artist, String imageUrl) {
         this.title = title;
         this.artist = artist;
-        this.length = length;
         this.imageUrl = imageUrl;
-        this.trackList = new ArrayList<>();
-        this.songCount = this.trackList.size();
+        this.songs = new ArrayList<>();
+        this.songCount = this.songs.size();
+        calculateAlbumLength();
     }
 
     // Methods
     public void calculateAlbumLength() {
         int total = 0;
-        for(Song track : trackList) {
+        for(Song track : this.songs) {
             total += track.length;
         }
-        length = total;
+       this.length = total;
     }
 
     // Getters and Setters
@@ -86,13 +86,13 @@ public class Album {
     }
 
     public List<Song> getTrackList() {
-        return trackList;
+        return songs;
     }
 
     public void addSong(Song song) {
         song.setAlbum(this);
-        trackList.add(song);
-        this.songCount = this.trackList.size();
+        songs.add(song);
+        this.songCount = this.songs.size();
     }
 
     public int getLength() {

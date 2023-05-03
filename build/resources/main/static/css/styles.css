@@ -80,7 +80,7 @@ h1 {
 }
 
 .album-list tbody tr:nth-child(odd) {
-    background-color: #f0f0f0;
+    background-color:s #f0f0f0;
 }
 
 .album-list img {
