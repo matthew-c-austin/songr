@@ -1,9 +1,7 @@
 package com.mcasongr.songr.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -14,6 +12,9 @@ public class Album {
     private String title;
     private String artist;
     private int songCount;
+    @OneToMany(mappedBy = "album", cascade = CascadeType.ALL)
+    @OrderBy("trackNumber")
+    List<Song> trackList;
     private int length;
     private String imageUrl;
 
@@ -66,6 +67,14 @@ public class Album {
 
     public void setSongCount(int songCount) {
         this.songCount = songCount;
+    }
+
+    public List<Song> getTrackList() {
+        return trackList;
+    }
+
+    public void setTrackList(List<Song> trackList) {
+        this.trackList = trackList;
     }
 
     public int getLength() {
