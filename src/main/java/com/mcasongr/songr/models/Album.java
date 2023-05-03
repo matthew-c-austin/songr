@@ -68,11 +68,11 @@ public class Album {
         this.songCount = songCount;
     }
 
-    public int getlength() {
+    public int getLength() {
         return length;
     }
 
-    public void setlength(int length) {
+    public void setLength(int length) {
         this.length = length;
     }
 

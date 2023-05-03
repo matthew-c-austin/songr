@@ -18,14 +18,11 @@ public class AlbumController {
     AlbumRepository albumRepository;
 
     @GetMapping("/albums")
-    public RedirectView getAllAlbums(Model model) {
+    public String getAllAlbums(Model model) {
             List<Album> albums = albumRepository.findAll();
+            model.addAttribute("albums", albums);
 
-            if (!albums.isEmpty()) {
-                model.addAttribute("albums", albums);
-            }
-
-        return new RedirectView("/albums");
+        return "albums";
     }
 
     @PostMapping("/albums")
