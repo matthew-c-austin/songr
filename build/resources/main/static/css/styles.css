@@ -86,3 +86,52 @@ h1 {
 .album-list img {
     border-radius: 10px;
 }
+
+/* Form styles */
+.form-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="url"] {
+    width: 100%;
+    padding: 6px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #013220;
+    border-radius: 4px;
+}
+
+form label {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #013220;
+}
+
+form button[type="submit"] {
+    background-color: #013220;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #015c47;
+}
