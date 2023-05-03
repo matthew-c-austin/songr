@@ -89,49 +89,54 @@ h1 {
 
 /* Form styles */
 .form-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
 }
 
 form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 form input[type="text"],
 form input[type="number"],
 form input[type="url"] {
-    width: 100%;
-    padding: 6px 12px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #013220;
-    border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 2px solid #013220;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 form label {
-    width: 100%;
-    padding: 8px 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #013220;
+  width: 100%;
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #013220;
 }
 
 form button[type="submit"] {
-    background-color: #013220;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
+  background-color: #013220;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 form button[type="submit"]:hover {
-    background-color: #015c47;
+  background-color: #015c47;
 }
