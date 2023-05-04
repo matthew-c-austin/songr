@@ -39,7 +39,7 @@ public class AlbumController {
         return new RedirectView("/albums");
     }
 
-    @DeleteMapping("/delete-album")
+    @DeleteMapping("/delete-album/")
     public RedirectView deleteAlbum(long albumId) {
         System.out.println(albumId);
         albumRepository.deleteById(albumId);
