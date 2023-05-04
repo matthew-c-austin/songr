@@ -8,9 +8,16 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
     <title>Albums</title>
 </head>
+<header>
+    <nav class="navbar">
+        <a class="explore-btn" th:href="@{/}">Home</a>
+        <a class="explore-btn" th:href="@{/albums}">Explore Albums</a>
+        <a class="explore-btn" th:href="@{/songs}">Explore Songs</a>
+    </nav>
+</header>
 <body>
 <h1>Albums</h1>
-<div class="album-list">
+<div class="table-container">
     <table>
         <thead>
         <tr>

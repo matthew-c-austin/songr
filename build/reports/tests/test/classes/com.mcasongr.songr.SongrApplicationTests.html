@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.488s</div>
+<div class="counter">0.481s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,17 +79,17 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">0.003s</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testHello()</td>
-<td class="success">0.194s</td>
+<td class="success">0.202s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testPostAlbum()</td>
-<td class="success">0.230s</td>
+<td class="success">0.214s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -102,14 +102,14 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>17:04:44.980 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [SongrApplicationTests]: using SpringBootContextLoader
-17:04:44.984 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.mcasongr.songr.SongrApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-17:04:44.985 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mcasongr.songr.SongrApplicationTests]: SongrApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:04:45.016 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [SongrApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-17:04:45.069 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [C:\Users\maust\OneDrive\Desktop\Shit\SWE Career Shit\codefellows\401\songr\build\classes\java\main\com\mcasongr\songr\SongrApplication.class]
-17:04:45.070 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mcasongr.songr.SongrApplication for test class com.mcasongr.songr.SongrApplicationTests
-17:04:45.156 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [SongrApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-17:04:45.157 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [SongrApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+<pre>17:09:32.566 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [SongrApplicationTests]: using SpringBootContextLoader
+17:09:32.571 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [com.mcasongr.songr.SongrApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:09:32.571 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mcasongr.songr.SongrApplicationTests]: SongrApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:09:32.601 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [SongrApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ImportsContextCustomizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+17:09:32.646 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [C:\Users\maust\OneDrive\Desktop\Shit\SWE Career Shit\codefellows\401\songr\build\classes\java\main\com\mcasongr\songr\SongrApplication.class]
+17:09:32.647 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mcasongr.songr.SongrApplication for test class com.mcasongr.songr.SongrApplicationTests
+17:09:32.732 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [SongrApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+17:09:32.733 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [SongrApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -119,23 +119,23 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.6)
 
-2023-05-03T17:04:45.370-07:00  INFO 24408 --- [    Test worker] c.mcasongr.songr.SongrApplicationTests   : Starting SongrApplicationTests using Java 17.0.6 with PID 24408 (started by maust in C:\Users\maust\OneDrive\Desktop\Shit\SWE Career Shit\codefellows\401\songr)
-2023-05-03T17:04:45.371-07:00  INFO 24408 --- [    Test worker] c.mcasongr.songr.SongrApplicationTests   : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2023-05-03T17:04:45.776-07:00  INFO 24408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-05-03T17:04:45.816-07:00  INFO 24408 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 2 JPA repository interfaces.
-2023-05-03T17:04:46.179-07:00  INFO 24408 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-05-03T17:04:46.226-07:00  INFO 24408 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-05-03T17:04:46.448-07:00  INFO 24408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-05-03T17:04:46.570-07:00  INFO 24408 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@14a1769d
-2023-05-03T17:04:46.571-07:00  INFO 24408 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-05-03T17:04:46.605-07:00  INFO 24408 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2023-05-03T17:04:47.298-07:00  INFO 24408 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-05-03T17:04:47.306-07:00  INFO 24408 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-05-03T17:04:47.673-07:00  WARN 24408 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-05-03T17:04:48.081-07:00  INFO 24408 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-05-03T17:04:48.081-07:00  INFO 24408 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-05-03T17:04:48.083-07:00  INFO 24408 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2023-05-03T17:04:48.103-07:00  INFO 24408 --- [    Test worker] c.mcasongr.songr.SongrApplicationTests   : Started SongrApplicationTests in 2.917 seconds (process running for 3.725)
+2023-05-03T17:09:32.951-07:00  INFO 4448 --- [    Test worker] c.mcasongr.songr.SongrApplicationTests   : Starting SongrApplicationTests using Java 17.0.6 with PID 4448 (started by maust in C:\Users\maust\OneDrive\Desktop\Shit\SWE Career Shit\codefellows\401\songr)
+2023-05-03T17:09:32.952-07:00  INFO 4448 --- [    Test worker] c.mcasongr.songr.SongrApplicationTests   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-05-03T17:09:33.406-07:00  INFO 4448 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-03T17:09:33.447-07:00  INFO 4448 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 2 JPA repository interfaces.
+2023-05-03T17:09:33.805-07:00  INFO 4448 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-03T17:09:33.864-07:00  INFO 4448 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-03T17:09:34.098-07:00  INFO 4448 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-03T17:09:34.229-07:00  INFO 4448 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60dcf9ec
+2023-05-03T17:09:34.230-07:00  INFO 4448 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-03T17:09:34.266-07:00  INFO 4448 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-03T17:09:34.931-07:00  INFO 4448 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-03T17:09:34.939-07:00  INFO 4448 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-03T17:09:35.269-07:00  WARN 4448 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-03T17:09:35.591-07:00  INFO 4448 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-05-03T17:09:35.592-07:00  INFO 4448 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-05-03T17:09:35.594-07:00  INFO 4448 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2023-05-03T17:09:35.606-07:00  INFO 4448 --- [    Test worker] c.mcasongr.songr.SongrApplicationTests   : Started SongrApplicationTests in 2.843 seconds (process running for 3.659)
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -251,7 +251,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6.1</a> at May 3, 2023, 5:04:48 PM</p>
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at May 3, 2023, 5:09:36 PM</p>
 </div>
 </div>
 </body>

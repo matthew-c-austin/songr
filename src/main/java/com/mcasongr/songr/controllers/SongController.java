@@ -32,8 +32,8 @@ public class SongController {
 
     @GetMapping("songs")
     public String getSongsPage(Model m) {
-        List<Song> songs = songRepository.findAll();
-        m.addAttribute("songs", songs);
+        List<Album> albums = albumRepository.findAll();
+        m.addAttribute("albums", albums);
         return "songs.html";
     }
 
