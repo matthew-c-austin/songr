@@ -3,10 +3,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background-color: #e0f2e9;
 }
 
 h1 {
+    color: #013220;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2 {
     color: #013220;
     text-align: center;
     padding: 20px 0;
@@ -27,7 +33,6 @@ h1 {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 44px); /* Adjust for the navbar height */
-    background-color: #e0f2e9;
 }
 
 .splash-container p {
@@ -51,39 +56,39 @@ h1 {
     background-color: #015c47;
 }
 
-/* Albums styles */
-.album-list {
+/* Table styles */
+.table-container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
 }
 
-.album-list table {
+.table-container table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
 }
 
-.album-list th {
+.table-container th {
     background-color: #013220;
     color: #ffffff;
     padding: 10px;
 }
 
-.album-list td {
+.table-container td {
     border: 1px solid #013220;
     padding: 10px;
 }
 
-.album-list tbody tr:nth-child(even) {
+.table-container tbody tr:nth-child(even) {
     background-color: #e0f2e9;
 }
 
-.album-list tbody tr:nth-child(odd) {
+.table-container tbody tr:nth-child(odd) {
     background-color: #f0f0f0;
 }
 
-.album-list img {
+.table-container img {
     border-radius: 10px;
 }
 

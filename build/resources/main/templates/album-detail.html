@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" />
+    <title>Album Detail</title>
+</head>
+<header>
+    <nav class="navbar">
+        <a class="explore-btn" th:href="@{/}">Home</a>
+        <a class="explore-btn" th:href="@{/albums}">Explore Albums</a>
+        <a class="explore-btn" th:href="@{/songs}">Explore Songs</a>
+    </nav>
+</header>
+<body>
+<h1 th:text="${album.title} + ' : ' + ${album.artist}"></h1>
+<div class="table-container">
+    <table>
+        <thead>
+        <tr>
+            <th>Track Number</th>
+            <th>Title</th>
+            <th>Length</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="song : ${album.trackList}">
+            <td th:text="${song.trackNumber}"></td>
+            <td th:text="${song.title}"></td>
+            <td th:text="${song.length / 60 + ':' + ('' + (100 + song.length % 60)).substring(1) }"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="form-container">
+        <form action="/addSong" method="POST">
+            <label for="trackNumber">Track Number:</label>
+            <input type="number" id="trackNumber" name="trackNumber" min="1" step="1" required>
+            <input type="hidden" id="albumId" name="albumId" th:value="${album.id}" />
+            <label for="title">Song Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="length">Length (in seconds):</label>
+            <input type="number" id="length" name="length" min="1" step="1" required>
+            <button type="submit">Add Song</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

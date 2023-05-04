@@ -8,27 +8,44 @@
     <link rel="stylesheet" th:href="@{/css/styles.css}" />
     <title>Albums</title>
 </head>
+<header>
+    <nav class="navbar">
+        <a class="explore-btn" th:href="@{/}">Home</a>
+        <a class="explore-btn" th:href="@{/albums}">Explore Albums</a>
+        <a class="explore-btn" th:href="@{/songs}">Explore Songs</a>
+    </nav>
+</header>
 <body>
 <h1>Albums</h1>
-<div class="album-list">
+<div class="table-container">
     <table>
         <thead>
         <tr>
             <th>Title</th>
             <th>Artist</th>
             <th>Song Count</th>
-            <th>Length (s)</th>
+            <th>Length (MM:SS)</th>
             <th>Album Art</th>
+            <th>Delete</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="album : ${albums}">
-            <td th:text="${album.title}"></td>
+            <td>
+                <a th:href="@{/album-detail/{id}(id=${album.id})}" th:text="${album.title}"></a>
+            </td>
             <td th:text="${album.artist}"></td>
             <td th:text="${album.songCount}"></td>
-            <td th:text="${album.length}"></td>
+            <td th:text="${album.length / 60 + ':' + ('' + (100 + album.length % 60)).substring(1) }"></td>
             <td>
                 <img th:src="${album.imageUrl}" alt="Album Art" width="100" height="100" />
+            </td>
+            <td>
+                <form action="/delete-album" method="POST">
+                    <input type="hidden" name="albumId" th:value="${album.id}" />
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit">X</button>
+                </form>
             </td>
         </tr>
         </tbody>
@@ -39,10 +56,6 @@
             <input type="text" id="title" name="title" required>
             <label for="artist">Artist:</label>
             <input type="text" id="artist" name="artist" required>
-            <label for="songCount">Song Count:</label>
-            <input type="number" id="songCount" name="songCount" min="1" step="1" required>
-            <label for="length">Length (in seconds):</label>
-            <input type="number" id="length" name="length" min="1" step="1" required>
             <label for="imageUrl">Image URL:</label>
             <input type="url" id="imageUrl" name="imageUrl" required>
             <button type="submit">Add Album</button>
